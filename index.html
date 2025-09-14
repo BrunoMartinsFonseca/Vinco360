@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Vinco - Relacionamento & Dados-------</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; overflow: hidden; background: #121212; color: #fff; }
+
+    header {
+      width: 100%;
+      height: 70px;
+      background: #1a1a1a;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+   
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li { cursor: pointer; transition: color 0.3s; }
+    nav ul li:hover { color: #00bfff; }
+
+    .slides-container {
+      width: 100vw;
+      height: calc(100vh - 70px);
+      margin-top: 70px;
+      position: relative;
+      overflow: hidden;
+    }
+
+  .slide {
+    position: absolute;
+    top: 0;
+    right: -5;
+    height: 100%;
+    width: 120%;
+    max-width: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center; /* fixa a parte direita da imagem */
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+  }
+
+    .slide.active { opacity: 1; z-index: 1; }
+
+    .slide-text {
+      position: absolute;
+      top: 50%;
+      right: 10%;
+      transform: translateY(-50%);
+      max-width: 90%;
+      color: white;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+    }
+
+    .slide-text h1 { font-size: 3rem; margin-bottom: 20px; }
+    .slide-text p { font-size: 1.2rem; line-height: 1.5; }
+
+    .login-card {
+      position: absolute;
+      top: 50%;
+      right: 60px;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.85);
+      padding: 35px;
+      border-radius: 15px;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      backdrop-filter: blur(5px);
+      z-index: 10;
+    }
+
+    .login-card h3 { text-align: center; margin-bottom: 10px; font-size: 1.5rem; color: #00bfff; }
+    .login-card input { padding: 12px; border-radius: 8px; border: none; font-size: 16px; outline: none; }
+    .login-card input:focus { box-shadow: 0 0 10px #00bfff; }
+    .login-card button { padding: 12px; border-radius: 8px; border: none; background: #00bfff; color: white; font-size: 16px; cursor: pointer; transition: 0.3s; }
+    .login-card button:hover { background: #0080ff; transform: translateY(-2px); }
+    #mensagem { font-size: 14px; text-align: center; }
+
+    @media (max-width: 1000px) {
+      .slide { width: 100%; right: 0; }
+      .slide-text { position: static; transform: none; max-width: 90%; margin: 20px; }
+      .login-card { position: static; transform: none; width: 90%; margin: 20px auto; }
+    }
+
+    @media (max-width: 500px) {
+      .slide-text h1 { font-size: 2rem; }
+      .slide-text p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+        <span>Vinco - Transformando Relacionamento em Resultados</span>
+    </div>
+    <nav>
+      <ul>
+        <li>Sobre Nós</li>
+        <li>Produtos</li>
+        <li>Integrações</li>
+        <li>Contato</li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="slides-container">
+    <!-- Slides Naturais -->
+    <div class="slide active" style="background: url('https://picsum.photos/1200/800?random=101') no-repeat;">
+      <div class="slide-text">        
+      </div>
+    </div>
+
+    <div class="slide" style="background: url('https://picsum.photos/1200/800?random=102') no-repeat;">
+      <div class="slide-text">       
+      </div>
+    </div>
+
+    <div class="slide" style="background: url('https://picsum.photos/1200/800?random=103') no-repeat;">
+      <div class="slide-text">       
+      </div>
+    </div>
+
+    <!-- 10 slides extras com natureza -->
+    <div class="slide" style="background: url('https://picsum.photos/1200/800?nature,1') no-repeat;"></div>
+    <div class="slide" style="background: url('https://picsum.photos/1200/800?nature,2') no-repeat;"></div>
+    <div class="slide" style="background: url('https://picsum.photos/1200/800?nature,3') no-repeat;"></div>
+    <div class="slide" style="background: url('https://picsum.photos/1200/800?nature,4') no-repeat;"></div>
+    <div class="slide" style="background: url('https://picsum.photos/1200/800?nature,5') no-repeat;"></div>
+    <div class="slide" style="background: url('https://picsum.photos/1200/800?nature,6') no-repeat;"></div>
+    <div class="slide" style="background: url('https://picsum.photos/1200/800?nature,7') no-repeat;"></div>
+    <div class="slide" style="background: url('https://picsum.photos/1200/800?nature,8') no-repeat;"></div>
+    <div class="slide" style="background: url('https://picsum.photos/1200/800?nature,9') no-repeat;"></div>
+    <div class="slide" style="background: url('https://picsum.photos/1200/800?nature,10') no-repeat;"></div>
+
+    <!-- Login -->
+    <div class="login-card">
+      <h3>Login</h3>
+      <input type="text" id="username" placeholder="Nome">
+      <input type="password" id="password" placeholder="Senha">
+      <button onclick="fazerLogin()">Entrar</button>
+      <p id="mensagem"></p>
+    </div>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides[currentSlide].classList.remove('active');
+      slides[index].classList.add('active');
+      currentSlide = index;
+    }
+
+    setInterval(() => {
+      let nextSlide = (currentSlide + 1) % slides.length;
+      showSlide(nextSlide);
+    }, 6000);
+
+    function fazerLogin() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+      const msg = document.getElementById("mensagem");
+
+      if(user === "admin" && pass === "1234"){
+        msg.style.color = "lightgreen";
+        msg.innerText = "Login realizado com sucesso!";
+      } else {
+        msg.style.color = "#ff6666";
+        msg.innerText = "Usuário ou senha inválidos!";
+      }
+    }
+  </script>
+</body>
+</html>

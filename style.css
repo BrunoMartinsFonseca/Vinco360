@@ -1,0 +1,20 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slides-container {
+  width: 100vw;
+  height: calc(100vh - 70px); /* ou 100vh se quiser por trás do header */
+  margin-top: 70px;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100vw;  /* ocupa toda a largura */
+  height: 100%; 
+  background-size: cover;
+  background-position: center;
+}
